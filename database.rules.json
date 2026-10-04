@@ -1,0 +1,27 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "strips_A": {
+      ".read": true,
+      "$id": { ".write": true, ".validate": "newData.hasChildren(['id'])" }
+    },
+    "strips_B": {
+      ".read": true,
+      "$id": { ".write": true, ".validate": "newData.hasChildren(['id'])" }
+    },
+
+    "meta_A":  { ".read": true, ".write": true },
+    "meta_B":  { ".read": true, ".write": true },
+    "metar_A": { ".read": true, ".write": true },
+    "metar_B": { ".read": true, ".write": true },
+
+    "presence": {
+      "$room": {
+        ".read": true,
+        "$peer": { ".write": true }
+      }
+    }
+  }
+}
